@@ -1,0 +1,160 @@
+
+#main {
+	width: 960px;
+	height: auto;
+	background: #fff;
+	margin: 10px auto;
+}
+
+.header_top {
+	width: 960px;
+	height: 20px;
+	margin: 0 0 5px 0;
+}
+.header_top span{
+	line-height: 20px;
+	vertical-align: middle;
+	float: right;
+	margin-right: 20px;
+}
+
+
+
+.logo {
+	border-top:1px solid #dedeff; 
+	width: 960px;
+	height: 80px;
+	margin: 0 0 10px 0;
+}
+.logo img{
+	float: left;
+	width: 220px;
+	height: 60px;
+	margin: 10px 0 10px 30px;
+}
+.logo .logo_right{
+	float: right;
+	width: 600px;
+	margin: 20px 0 10px 0;
+	height: 60px;
+}
+.logo .logo_right input{
+	border:1px solid #000;
+	font-size:1.5em;
+	width: 350px;
+	height: 40px;
+	padding:5px 5px;	
+}
+.logo .logo_right .logo_right_a{
+	margin-left: 90px;
+	display: inline-block; 
+	float: right;
+	height: 40px;
+	border: 2px solid #999;
+}
+.logo .logo_right a{
+	text-decoration: none;
+	display: inline-block;
+	line-height: 36px;
+	background: #fff;
+	color: #333;
+	padding: 0 15px;
+}
+.logo .logo_right a:hover{
+	color:red;
+}
+.logo .logo_right .active{
+	border-right: 2px solid #aaa;
+	display: inline-block;
+	line-height: 36px;
+	background: red;
+	color: #FFFFFF;
+}
+.logo .logo_right .active:hover{
+	background: #eee;
+	color: red;
+}
+
+
+
+
+#navbar{
+	border-bottom: 2px solid red;
+	width: 960px;
+	height: 40px;
+}
+.left_nav{
+	float: left;
+	background: red;
+	width: 210px;
+	padding: 0 40px;
+	color: #fff;
+}
+.left_nav p{
+	font: normal 700 1.5em/40px Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana," sans-serif";
+}
+.right_nav{
+	float: left;
+	line-height: 40px;
+	font-size: 1.3em;
+	font-weight: 700;
+}
+.right_nav ul li{
+	float:left;
+	padding: 0 30px;
+}
+
+
+
+
+.aside {
+	width: 210px;
+	height: 400px;
+	margin: 0 0 10px 0;
+	float: left;
+	border-left: 1px solid #C4AEAF;
+}
+.aside .aside_nav ul li{
+	line-height:22px;
+	padding: 5px 0 7px 10px;
+}
+.aside .aside_nav ul li:hover{
+	border:1px solid red;
+	border-right: none;
+}
+.section {
+	width:750px;
+	height: 400px;
+	float:left;
+	background:#EB474A;
+}
+
+#main .left_new {
+	width: 600px;
+	height: 200px;
+	float: left;
+	margin: 10px 0 10px 0;
+	background: #54BB90;
+}
+
+#main .right_new {
+	width: 350px;
+	height: 200px;
+	float:left;
+/*	margin: 0 0 10px 10px;*/
+	background: #E11788;
+}
+
+#main .link {
+	clear: both;
+	width: 960px;
+	height: 80px;
+	background: #3BCB34;
+	margin: 0 0 10px 0;
+}
+
+#main .footer {
+	width: 960px;
+	height: 40px;
+	background: #D51A71;
+}
