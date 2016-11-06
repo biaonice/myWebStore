@@ -105,8 +105,6 @@
 }
 
 
-
-
 .aside {
 	width: 210px;
 	height: 400px;
@@ -114,14 +112,15 @@
 	float: left;
 	border-left: 1px solid #C4AEAF;
 }
-.aside .aside_nav ul li{
+.navBox ul li{
 	line-height:22px;
 	padding: 5px 0 7px 10px;
 }
-.aside .aside_nav ul li:hover{
+.navBox ul li:hover{
 	border:1px solid red;
 	border-right: none;
 }
+
 .section {
 	width:750px;
 	height: 400px;
@@ -129,23 +128,62 @@
 	background:#EB474A;
 }
 
+#main .main_buttom{
+	clear: both;
+	width:960px;
+}
 #main .left_new {
-	width: 600px;
-	height: 200px;
+	width: 610px;
+	height: 400px;
 	float: left;
 	margin: 10px 0 10px 0;
-	background: #54BB90;
 }
-
-#main .right_new {
-	width: 350px;
-	height: 200px;
+.main_buttom .left_new .imageBox{
+	float: left;
+	background: #DBCCCD;
+	border: 1px solid #000000;
+	width: 102px;
+	height: 150px;
+	margin:10px;
+}
+.main_buttom .left_new .imageBox .imageDetails{
+	display: inline-block;
+	padding: 5px;
+}
+.main_buttom .main_buttom_nav{
+	display: block;
+	border-bottom:1px solid #999;
+	padding: 0 0 5px 20px;
+	margin: 5px 0;
+}
+.main_buttom .right_new {
+	width: 340px;
+	height: 370px;
 	float:left;
-/*	margin: 0 0 10px 10px;*/
-	background: #E11788;
+	margin: 10px 0 10px 10px;
+	padding: 0 0 20px 0;
+	overflow: hidden;
 }
 
-#main .link {
+.main_buttom .right_new .navBox li{
+	font-size: 1.2em;
+	line-height:25px;
+	padding: 5px 0 1px 10px;
+	border-bottom: 1px solid #999;
+}
+.li_right{
+	float:right;
+	margin-right: 20px;
+}
+.span{
+	display: block;
+	line-height: 40px;
+	margin-right: 10px;
+}
+.main_buttom .right_new .navBox li a:hover{
+	line-height:25px;
+}
+#main .link{
 	clear: both;
 	width: 960px;
 	height: 80px;

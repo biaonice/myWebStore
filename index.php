@@ -30,7 +30,7 @@
 		
 		<nav id="navbar">
 			<div class="left_nav">
-				<p>全部书籍分类</p><img src="" alt="">
+				<p>全部书籍分类</p>
 				<ul>
 					<li><a href=""></a></li>
 				</ul>
@@ -48,7 +48,7 @@
 		</nav>
 		
 		<aside class="aside">
-			<nav class="aside_nav">
+			<nav class="navBox">
 				<ul>
 					<li><a href="">内科</a>、<a href="">内科</a></li>
 					<li><a href="">外科</a>、<a href="">内科</a>、<a href="">内科</a></li>
@@ -70,14 +70,84 @@
 			<img src="image/3.jpg" alt="" width="750" height="400">
 		</section>
 		
-		<div class="left_new">
+		<div class="main_buttom">
+			<div class="left_new">
+				<div class="main_buttom_nav">
+					<h3>精品推荐</h3>
+				</div>
+			
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+				<div class="imageBox">
+					<img src="image/1.jpg" alt="" width="100" height="110">
+					<span class="imageDetails">大海因为有了波澜.</span>
+				</div>
+				
+			</div>
+
+			<div class="right_new">
+				<div class="main_buttom_nav"><span class="h3">排行榜</span><span class="li_right span"><a href="">更多>></a></span></div>
+				<nav class="navBox">
+					<li><a href="">内科哈哈哈副科级阿双方尽快</a><span class="li_right">1</span></li>
+					<li><a href="">内科</a><span class="li_right">2</span></li>
+					<li><a href="">内科</a><span class="li_right">3</span></li>
+					<li><a href="">内科</a><span class="li_right">4</span></li>
+					<li><a href="">内科</a><span class="li_right">5</span></li>
+					<li><a href="">内科</a><span class="li_right">6</span></li>
+					<li><a href="">内科</a><span class="li_right">7</span></li>
+					<li><a href="">内科</a><span class="li_right">8</span></li>
+					<li><a href="">内科</a><span class="li_right">9</span></li>
+					<li><a href="">内科</a><span class="li_right">8</span></li>
+					<li><a href="">内科</a><span class="li_right">9</span></li>
+					<li><a href="">内科</a><span class="li_right">8</span></li>
+					<li><a href="">内科</a><span class="li_right">9</span></li>
+				</nav>
+			</div>
 			
 		</div>
-		
-		<div class="right_new">
-			
-		</div>
-		
 		<div class="link">
 			
 		</div>
