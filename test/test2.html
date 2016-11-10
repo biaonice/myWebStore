@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>伪类</title>
+	<style>
+		[content=value]{
+			font-size: 1.5em;
+		}
+		[content=main]:first-letter{
+			color:red;
+		}
+		[content=mian]:first-line{
+			color:blue;
+		}
+		li:first-child{
+			color:red;
+		}
+	/*	p:before{
+			content:"1.1--";
+		}
+		p:after{
+			content:"--1.2";
+		}
+	*/
+		p~ul{
+			color:blue;
+		}
+	/*	a[src^="https"]{
+			color:#3e8f3e;
+		}
+		a[src*=".pdf"]{
+			display:block;
+			width:50px;
+			height:50px;
+			background:#000;
+		}
+		a[src$="123"]{
+			width:50px;
+			height:50px;
+			background:#999;
+		}
+	*/
+		::selection{
+			background:red;
+		}
+		p:first-of-type{
+			background:#3e8f3e;
+		}
+		p:last-of-type{
+			background:green;
+		}
+		p:only-of-type{
+			background:red;
+		}
+		p:nth-child(3){
+			color:#2aabd2;
+		}
+		p:nth-of-type(3){
+			background:#1b6d85;
+		}
+		p:nth-of-type(2n+1){
+			background:#000;
+		}
+		:root{
+			background:#eee;
+		}
+		p:empty{
+			background:yellow;
+			width:20px;
+			height:10px;
+		}
+		:target{
+			border:1px solid #333;
+			background:#999;
+		}
+		input[type="text"]:enabled{
+
+		}
+		/*a伪类的顺序*/
+		a:link{
+			 background:red;
+		 }
+		a:visited{
+			background:blue;
+		}
+		a:hover{
+			color:white;
+		}
+		a:active{
+			 font-size:1.5em;
+		 }
+	</style>
+</head>
+
+<body>
+	<div content="value">
+		<p>heheda</p>
+	</div>
+	
+	<div>
+		<p content="main">这个是什么这个是什么这个是什么这个是什么这个是什么这个是什么</p>
+		<ul>
+			<li>这是1</li>
+			<li>这是2</li>
+		</ul>
+	</div>
+	<div>
+		<a src="https://www.baidu.com">百度</a>
+		<a src="123.pdf" alt="">
+	</div>
+
+	<div>
+		<p><a href="#news1">这是第一个段落</a></p>
+		<p><a href="#news2">这是第2个段落</a></p>
+		<p id="news1">这是第3个段落</p>
+		<p id="news2">这是第4个段落</p>
+		<p></p>
+	</div>
+	<div>
+		<span><a href="###">第一个测试连接</a></span>
+	</div>
+</body>
+</html>

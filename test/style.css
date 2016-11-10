@@ -1,0 +1,141 @@
+/* CSS Document */
+
+.test{
+	background:url(../image/1.jpg) no-repeat;
+	background-size: 500px 500px;
+	width:500px;
+	height: 500px;
+}
+
+.abs{
+	width:200px;
+	height: 200px;
+	position: absolute;
+	left: 500px;
+	top: 200px;
+	background-color: aqua;
+	border: 10px solid #64BBC5;
+	border-radius: 20%;
+}
+.abd{
+	width:200px;
+	height: 200px;
+	position: absolute;
+	left: 700px;
+	top:390px;
+	background-color: aqua;
+	border: 10px solid #64BBC5;
+	border-radius: 20%;
+}
+.abt{
+	width:200px;
+	height: 200px;
+	position: absolute;
+	left: 700px;
+	top:10px;
+	background-color: aqua;
+	border: 10px solid #64BBC5;
+	border-radius: 20%;
+}
+.abb{
+	width:200px;
+	height: 200px;
+	position: absolute;
+	left: 900px;
+	top:200px;
+	background-color: aqua;
+	border: 10px solid #64BBC5;
+	border-radius: 20%;
+}
+
+.abcd{
+	text-align: center;
+}
+.abcd span{
+	width:100px;
+	height: 100px;
+	font-size: 2em;
+	background-color: black;
+	color: aliceblue;
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.counter{
+	counter-reset:wangdanni 2 hanbiao 3;
+	counter-increment: wangdanni;
+}
+.counter:before{ content:counter(wangdanni);}
+.counter:after{content:counter(hanbiao);}
+
+
+
+.reset{
+	padding-left: 20px;
+	counter-reset: wangdanni;
+	line-height: 1.5em;
+	color:#666;
+}
+.counters:before{
+	content: counters(wangdanni,'-') '. ';
+	counter-increment: wangdanni;
+}
+
+dt,dd{
+	display: inline;
+	margin: 0;
+}
+.ieShadow{
+    _width:220px;
+    _height:220px;
+    filter:progid:DXImageTransform.Microsoft.Blur(pixelradius=20);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Blur(pixelradius=20)";
+    background-color:#fff\9;
+    position:absolute;
+    top:10px;
+    left:10px;
+    bottom:-10px;
+    right:-10px;
+}
+.dl{
+	padding:10px 15px;
+	border:3px solid red;
+	box-shadow:inset 30px 30px  #999;
+	width: 300px;
+	padding-left: 20px;
+	background-color: #ddd;
+}
+/*
+dd:after{
+	content:'\A';
+	white-space: pre;
+}
+*/
+dt:before{
+	content:'\D\A';
+	white-space: pre;
+}
+dt:first-child:before{
+	content:normal;
+}
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
