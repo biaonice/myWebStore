@@ -1,0 +1,9 @@
+div>p{
+    text-transform:capitalize;
+    /*text-transform:lowercase;*/
+}
+[content=book]{
+    width:80%;
+    margin:5% auto;
+    border:2px solid #999;
+}
