@@ -62,18 +62,18 @@
 	margin: 0 20px;
 }
 
-.counter{
-	counter-reset:wangdanni 2 hanbiao 3;
-	counter-increment: wangdanni;
-}
-.counter:before{ content:counter(wangdanni);}
-.counter:after{content:counter(hanbiao);}
+/*.counter{*/
+	/*counter-reset:wangdanni 2 hanbiao 3;*/
+	/*counter-increment: wangdanni;*/
+/*}*/
+/*.counter:before{ content:counter(wangdanni);}*/
+/*.counter:after{content:counter(hanbiao);}*/
 
 
 
 .reset{
 	padding-left: 20px;
-	counter-reset: wangdanni;
+	/*counter-reset: wangdanni;*/
 	line-height: 1.5em;
 	color:#666;
 }

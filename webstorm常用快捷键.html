@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #pageHome{
+            width:960px;
+            margin:60px auto;
+        }
+        .p1{
+            padding:5px 0 0 20px;
+            line-height: 1.8em;
+            /*counter-reset:wangdanni;*/
+            font: 14px/1.5 Arial, Verdana, sans-serif;
+            color: #333;
+        }
+        .p1:before{
+            content: counters(wangdanni,"-") ".";
+            counter-increment: wangdanni;
+        }
+        p>span{
+            padding-left:10px;
+            display:inline-block;
+            width:700px;
+            text-align:left;
+            float:right;
+            background:burlywood;
+        }
+    </style>
+</head>
+<body>
+<div id="pageHome">
+    <h3>webStorm快捷键</h3>
+    <hr>
+   <p class="p1"> Ctrl+/ 或 Ctrl+Shift+/	        <span>注释（// 或者/*…*/ ）</span></p>
+   <p class="p1"> Shift+F6	                    <span>重构-重命名</span></p>
+   <p class="p1"> Ctrl+X	                    <span>删除行</span></p>
+   <p class="p1"> Ctrl+D	                    <span>复制行</span></p>
+   <p class="p1"> Ctrl+G	                    <span>查找行</span></p>
+   <p class="p1"> Ctrl+Shift+Up/Down	        <span>代码向上/下移动。</span></p>
+   <p class="p1"> F2 或Shift+F2	                <span>高亮错误或警告快速定位</span></p>
+   <p class="p1"> 写代码，按Tab	                <span>生成代码</span></p>
+   <p class="p1"> 选中文本，按Ctrl+Shift+F7     <span>高亮显示所有该文本，按Esc高亮消失。(因为这个功能我就可以发放心的放弃sublime了)</span></p>
+   <p class="p1"> Ctrl+B或Ctrl+鼠标左键单击     <span>快速打开光标处的类或方法，（NB的功能）</span></p>
+   <p class="p1"> Ctrl + Alt + B	            <span>Go to implementation(s) 跳转方法实现处</span></p>
+   <p class="p1"> Ctrl + Shift + I	            <span>Open quick definition lookup 打开定义快速查找</span></p>
+   <p class="p1"> Alt + Up/Down	                <span>Go to previous/next method 跳转到上一个/下一个方法</span></p>
+   <p class="p1"> Ctrl+E	                    <span>最近打开的文件</span></p>
+   <p class="p1"> Alt+F1	                    <span>查找代码所在位置</span></p>
+   <p class="p1"> Ctrl+Alt+L	                <span>格式化代码</span></p>
+   <p class="p1"> Ctrl+R	                    <span>替换文本</span></p>
+   <p class="p1"> Ctrl+F	                    <span>查找文本</span></p>
+   <p class="p1"> Ctrl+P	                    <span>方法参数提示</span></p>
+   <p class="p1"> F3	                        <span>查找下一个</span></p>
+   <p class="p1"> Shift+F3	                    <span>查找上一个</span></p>
+   <p class="p1"> alt+Shift+F	                <span>将当前文件加入收藏夹</span></p>
+   <p class="p1"> ctrl+alt+s	                <span>打开配置窗口</span></p>
+   <p class="p1"> ctrl+Shift+N	                <span>通过文件名快速查找工程内的文件（必记）</span></p>
+   <p class="p1"> ctrl+Shift+alt+N	            <span>通过一个字符快速查找位置（必记）</span></p>
+   <p class="p1"> Shift+enter	                <span>重新开始一行（无论光标在哪个位置）</span></p>
+   <p class="p1"> Ctrl + Alt + T 	            <span>with…（if, else, try, catch, for, etc）用 * 来围绕选中的代码行，（ * 包括 if 、 while 、 try catch 等）</span></p>
+   <p class="p1"> Ctrl + Shift + U	            <span>Toggle case for word at caret or selected block 光标所在位置大小写</span></p>
+   <p class="p1"> Ctrl + Delete	                <span>Delete to word end 删除文字结束</span></p>
+   <p class="p1"> Ctrl + Backspace	            <span>Delete to word start 删除文字开始</span></p>
+   <p class="p1"> Ctrl + E	                    <span>Recent files popup 弹出最近打开的文件</span></p>
+   <p class="p1"> F11	Toggle bookmark         <span>切换标记，我觉得叫书签更好，就是sublime text 的F2</span></p>
+   <p class="p1"> Ctrl + Shift + F12	        <span>Toggle maximizing editor 切换最大化编辑器</span></p>
+   <p class="p1"> Alt + Shift + F	            <span>Add to Favorites 添至收藏夹</span></p>
+   <p class="p1"> Alt + 鼠标左键	                <span>垂直选取内容</span></p>
+</div>
+
+</body>
+</html>
