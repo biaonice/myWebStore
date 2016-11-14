@@ -1,0 +1,15 @@
+/* create hanbiao 2016/11/14 */
+
+body{
+    font: 11px/1.5 Arial, Verdana, sans-serif;
+    color: #888398;
+}
+#pageHome{
+    width:100%;
+    height:auto;
+}
+#pageHeader{
+    width:1200px;
+    height:40px;
+    border-bottom:1px solid #999;
+}

@@ -11,14 +11,14 @@
         .p1{
             padding:5px 0 0 20px;
             line-height: 1.8em;
-            /*counter-reset:wangdanni;*/
+            counter-increment:wangdanni;
             font: 14px/1.5 Arial, Verdana, sans-serif;
             color: #333;
         }
         .p1:before{
-            content: counters(wangdanni,"-") ".";
-            counter-increment: wangdanni;
-        }
+              content: counter(wangdanni) ". ";
+          }
+
         p>span{
             padding-left:10px;
             display:inline-block;
