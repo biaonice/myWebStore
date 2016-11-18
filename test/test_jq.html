@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../js/jquery-3.1.1.min.js"></script>
-
     <style>
         #change_me{
             position:absolute;
@@ -24,12 +23,35 @@
     <button class="color">sjfgh</button>
     <button class="disappear">sjfgh</button>
     <div id="change_me">Make Me Do Stuff!</div>
+    <i>1234</i>
 
+    <ul id="one" class="level-1">
+        <li class="item-i">I</li>
+        <li id="ii" class="item-ii">II
+            <ul class="level-2">
+                <li class="item-a">A</li>
+                <li class="item-b">B
+                    <ul class="level-3">
+                        <li class="item-1">1</li>
+                        <li class="item">2</li>
+                        <li class="item">3</li>
+                    </ul>
+                </li>
+                <li class="item-c">C</li>
+            </ul>
+        </li>
+        <li class="item-iii">III</li>
+    </ul>
 <div class="guess_box">fgsdfgasdgsdfgadgas</div>
+
+<b>holle</b>
+<p>qwerqwe</p>
+
 </body>
 <script>
-    $(document).ready(function(){
 
+    $("p").after($("b"));
+    $(document).ready(function(){
         $(".move_up").click(function(){
             $("#change_me").animate({top:30},200);
         });
@@ -73,5 +95,20 @@
             });
         }
     });
+$(".item").after("<span>test</span>")
+    $( "li.item-a" )
+            .closest( "ul" )
+            .css( "background-color", "red" );
+    $( "li" ).each(function( index ) {
+        console.log( index + ": " + $( this ).text() );
+    });
+    $( "li.item-a" )
+            .closest( "li" )
+            .css( "background-color", "red" );
+    $("li").has("ul").css("background","red");
+
+
+
+
 </script>
 </html>
