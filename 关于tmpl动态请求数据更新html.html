@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        span{
+            padding:0;
+            margin:0;
+        }
+        #dome1>span:nth-of-type(2n+1){
+            background:#333;
+            color:#fff;
+        }
+    </style>
+</head>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.tmpl.js"></script>
+<div id="div_dome" refresh="dome">
+    <script id="dome" type="text/x-jquery-tmpl" templete="dome">
+    <div>
+        <span> <input type="text" value="${ID}" data="id"></span>
+        <span>
+            <input type="radio" name="sex" data="xb"  {{if radio=="1"}}  checked {{/if}}>男
+            <input type="radio" name="sex" data="xb"  {{if radio=="2"}} checked {{/if}}>女
+        </span>
+        <span>
+            <select name="select" id="select">
+                <option  data="select" {{if select==0}} selected {{/if}}>选项1</option>
+                <option  data="select" {{if select==1}} selected {{/if}}>选项2</option>
+            </select>
+        </span>
+    </div>
+    <div style="border:1px solid #333; margin:20px 0;line-height:1.5em" id="dome1">
+        {{each(i,data) data}}
+             <span style="border-right:1px solid #333;width:5em;text-align:center;display:inline-block">
+                 ${ID}
+             </span>
+             <span style="border-right:1px solid #333;width:5em;text-align:center;display:inline-block">
+                 ${radio=="1"?"男":"女"}
+             </span>
+             <span style="border-right:1px solid #333;width:5em;text-align:center;display:inline-block">
+                 ${select==0?"选项1":"选项2"}
+             </span>
+        {{/each}}
+    </div>
+</script>
+</div>
+
+<script type="application/javascript">
+    var data=[
+        {
+            ID:"1234",
+            radio:"1",
+            select:1
+        },{
+            ID:"12345",
+            radio:"2",
+            select:1
+        },{
+            ID:"1274",
+            radio:"1",
+            select:1
+        },{
+            ID:"1294",
+            radio:"2",
+            select:0
+        },{
+            ID:"9234",
+            radio:"1",
+            select:0
+        }
+    ];
+    $("#dome").tmpl(data).appendTo('#div_dome');
+
+
+</script>
