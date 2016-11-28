@@ -168,7 +168,7 @@ $(".item").after("<span>test</span>")
         function animate(){
             var elapsed=(new Date().getTime())-start;
             var fraction=elapsed/time;
-            if (fraction<1){
+                 if (fraction<1){
                 var opacity=1-ease(fraction);
                 e.style.opacity = String(opacity);
                 setTimeout(animate,Math.min(25,time-elapsed));

@@ -49,6 +49,7 @@
 }
 
 .abcd{
+	line-height:90px;
 	text-align: center;
 }
 .abcd span{
@@ -57,7 +58,6 @@
 	font-size: 2em;
 	background-color: black;
 	color: aliceblue;
-	vertical-align: middle;
 	display: inline-block;
 	margin: 0 20px;
 }
