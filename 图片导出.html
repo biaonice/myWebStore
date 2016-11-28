@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片导出</title>
+    <style>
+        #eg1{
+            margin:0 auto;
+            width:400px;
+            height:400px;
+            overflow:scroll;
+        }
+        #eg1 span{
+            line-height:1.5em;
+            display:inline-block;
+            margin:5px 0;
+        }
+        button{
+            margin:0 auto;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div id="eg1">
+            <span>2S4“郁金香”由苏联乌拉尔运输与机械工业设计局于20世纪60年代末研发，于1972年投入苏军服役，共生产了450多门。</span>
+        　　<span>2S4全车长8.5米，全宽3.2米，全高3.2米，战斗全重30吨，动力系统搭载有一台液冷柴油机，最大公路时速每小时62千米。</span>
+            <span>全车共搭载9人，其中5人负责操纵迫击炮。车体加装有20毫米厚的焊接装甲，可保护乘员抵御7.62毫米、12.7毫米机枪弹直接命中，或是大口径榴弹破片伤害。</span>
+        　　<span>2S4采用火炮外置设计，配备有一门240毫米后膛装填式重型迫击炮，炮身长6.5米，采用弹舱方式供弹（每个弹舱备弹20发），
+               配有一台简易自动装填机，但由于炮弹过重，射速仅能达到每分钟一发，射击准备需10分钟。发射普通榴弹时，最大射程为9.65千米。</span>
+            <span>全车共搭载9人，其中5人负责操纵迫击炮。车体加装有20毫米厚的焊接装甲，可保护乘员抵御7.62毫米、12.7毫米机枪弹直接命中，或是大口径榴弹破片伤害。</span>
+        　　<span>2S4采用火炮外置设计，配备有一门240毫米后膛装填式重型迫击炮，炮身长6.5米，采用弹舱方式供弹（每个弹舱备弹20发），
+               配有一台简易自动装填机，但由于炮弹过重，射速仅能达到每分钟一发，射击准备需10分钟。发射普通榴弹时，最大射程为9.65千米。</span>
+    </div>
+    <a id="export">导出</a>
+    <div id="eg2"></div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script>
+        $(function(){
+            $("#export").click(function(){
+                html2canvas($("#eg1"),{
+                    height:$("#eg1")[0].scrollHeight,
+                    onrendered: function (canvas) {
+                        $('#export').attr('href', canvas.toDataURL());
+                        $('#export').attr('download', 'myjobdeer.png');
+                        //$('#down_button').css('display','inline-block');
+                        var html_canvas = canvas.toDataURL();
+                        $.post('', {
+                            order_id: 1,
+                            type_id: 2,
+                            html_canvas: html_canvas
+                        }, function(json) {}, 'json');
+                    }
+                });
+            });
+        })
+
+    </script>
+</body>
+</html>
