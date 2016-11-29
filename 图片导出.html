@@ -32,7 +32,7 @@
         　　<span>2S4采用火炮外置设计，配备有一门240毫米后膛装填式重型迫击炮，炮身长6.5米，采用弹舱方式供弹（每个弹舱备弹20发），
                配有一台简易自动装填机，但由于炮弹过重，射速仅能达到每分钟一发，射击准备需10分钟。发射普通榴弹时，最大射程为9.65千米。</span>
     </div>
-    <a id="export">导出</a>
+    <button id="export">导出</button>
     <div id="eg2"></div>
 
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -43,15 +43,36 @@
                 html2canvas($("#eg1"),{
                     height:$("#eg1")[0].scrollHeight,
                     onrendered: function (canvas) {
-                        $('#export').attr('href', canvas.toDataURL());
-                        $('#export').attr('download', 'myjobdeer.png');
-                        //$('#down_button').css('display','inline-block');
-                        var html_canvas = canvas.toDataURL();
-                        $.post('', {
-                            order_id: 1,
-                            type_id: 2,
-                            html_canvas: html_canvas
-                        }, function(json) {}, 'json');
+                        var context = canvas.getContext("2d");
+                        var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                        for(var i = 0; i < imageData.data.length; i += 4) {
+                            // 当该像素是透明的，则设置成白色
+                            if(imageData.data[i + 3] == 0) {
+                                imageData.data[i] = 255;
+                                imageData.data[i + 1] = 255;
+                                imageData.data[i + 2] = 255;
+                                imageData.data[i + 3] = 255;
+                            }
+                        }
+                        context.putImageData(imageData, 0, 0);
+                        var type = 'png';
+                        var imgData = canvas.toDataURL("image/png");
+                        var _fixType = function (type) {
+                            type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+                            var r = type.match(/png|jpeg|bmp|gif/)[0];
+                            return 'image/' + r;
+                        };
+                        imgData = imgData.replace(_fixType(type), 'image/octet-stream');
+                        var saveFile = function (data, filename) {
+                            var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+                            save_link.href = data;
+                            save_link.download = filename;
+                            var event = document.createEvent('MouseEvents');
+                            event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                            save_link.dispatchEvent(event);
+                        };
+                        var filename = 'export' + (new Date()).getTime() + '.' + type;
+                        saveFile(imgData, filename);
                     }
                 });
             });
