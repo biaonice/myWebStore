@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        #dome{
+            position:relative;
+            margin:10px auto;
+            width:700px;
+            height:500px;
+            border:1px dotted #333;
+        }
+        #dome span{
+            font-size:24px;
+            font-weight:700;
+            position:absolute;
+            top:100px;
+            right:40px;
+            display:inline-block;
+            width:17px;
+            /*outline:1px dashed #333;*/
+            height:100px;
+        }
+        #dome span a{
+            width:10px;
+            height:20px;
+            display:inline-block;
+            text-align:center;
+        }
+        #dome span strong{
+            font-size:14px;
+            color:green;
+        }
+        #dome1{
+            border:1px solid #333;
+            position:absolute;
+            top:50px;
+            right:100px;
+            height:400px;
+
+        }
+        #dome1 p{
+            font:18px;
+            font-weight:600px;
+            text-align:start;
+            border:1px solid #333;
+            width:15px;
+            height:400px;
+            display:inline-block;
+            margin:0 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="dome" dir="rtl">
+    <span>
+        沁园春<a></a>雪<a></a>
+        <strong>毛泽东</strong>
+    </span>
+    <div id="dome1">
+        <p>北国风光，千里冰封，万里雪飘。</p>
+        <p>望长城内外，惟余莽莽；大河上下，顿失滔滔。</p>
+        <p>山舞银蛇，原驰蜡象，欲与天公试比高。</p>
+        <p>须晴日，看红装素裹，分外妖娆。</p>
+        <p>江山如此多娇，引无数英雄竞折腰。</p>
+        <p>惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
+        <p>一代天骄，成吉思汗，只识弯弓射大雕。</p>
+        <p>俱往矣，数风流人物，还看今朝。</p>
+    </div>
+
+</div>
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function(){
+        var btn=document.getElementById("btn");
+        function getName(name){
+           alert(name);
+        }
+//        console.log(getName);
+//        var eg="123";
+////      btn.addEventListener('click',getName,false);
+//        document.body.onclick = function(event){
+//            alert("Body clicked");
+//        };
+      console.log(document.nodeType);
+      console.log(document.nodeName);
+        var name=document.getElementById("qwe");
+
+        function getName(name){
+            this.name=name;
+        }
+
+
+    })();
+</script>
+
+</body>
+</html>

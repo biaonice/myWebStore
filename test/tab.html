@@ -1,0 +1,19 @@
+<script>
+    $(function(){
+        var currentElement=window.areaRight.find('[content=roleManage]');
+        currentElement.on('click','li[action]',function(){
+            var _this=$(this);
+            _this.addClass('active').siblings('li').removeClass('active');
+            var url=window.areaPath.find('[path="'+_this.attr('action')+'"]').attr('file')||'404.html';
+            if(currentElement.find('[content="'+_this.attr('action')+'"]').length>0){
+                currentElement.find('[content="'+_this.attr('action')+'"]').show().siblings('[content]').hide();
+            }else{
+                $.get(url,function(result){
+                    currentElement.find('[container=module]>[content]').hide();
+                    currentElement.find('[container="module"]').append(result);
+                },'html');
+            }
+        });
+        currentElement.find('[action=roleManageModule]').trigger('click');
+    });
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型链</title>
+</head>
+<body>
+<script>
+   window.onload=function(){
+//工厂模式
+       function createPerson(name,age,job){
+           var o=new Object();
+           o.name=name;
+           o.age=age;
+           o.job=job;
+           o.sayName=function(){
+               alert(this.name);
+           };
+           return o;
+       }
+       var person1=createPerson("123",24,"Software Engineer");
+       console.log(person1);
+
+//构造函数模式
+       function Person(name,age,job){
+           this.name=name;
+           this.age=age;
+           this.job=job;
+           this.sayName=function(){
+               alert(this.name);
+           };
+       }
+        var person2=new Person("12",12,"Doctor");
+       console.log(person2);
+
+       function Computer(price,brand){
+            this.price=price;
+            this.brand=brand;
+       };
+       var computer1=new Computer(123,"联想");
+       console.log(computer1);
+
+
+
+
+
+
+
+
+
+
+
+   }
+</script>
+</body>
+</html>

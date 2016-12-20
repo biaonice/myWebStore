@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #mydiv{
+            width:400px;
+            height:400px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input id="btn" type="button" value="按钮"></input>
+    <div id="mydiv"></div>
+</div>
+<script>
+//        (function(){
+//            var b=[];
+//            for (var i=0;i<20;i++){
+//                b.push(i);
+//            }
+//            alert(i);
+//            console.log(b);
+//        })();
+//
+//        var someFunction = function(){
+//                alert("123");
+//        };
+//        someFunction();
+
+//
+//        var EventUtil={
+//            addHandler:function(element,type,handler){
+//                if (element.addEventListener){
+//                    element.addEventListener(type, handler, false);
+//                }else if (element.attachEvent){
+//                    element.attachEvent("on"+type, handler);
+//                }else{
+//                    element["on"+type]=handler;
+//                }
+//            },
+//            removeHandler:function(element, type, handler){
+//                if (element.removeEventListener){
+//                    element.removeEventListener(type, handler, false);
+//                } else if (element.detachEvent){
+//                    element.detachEvent("on" + type, handler);
+//                } else {
+//                    element["on" + type] = null;
+//                }
+//            }
+//        }
+
+(function(){
+    var btn=document.getElementById("btn");
+    function getName(name){
+       return alert(name);
+    }
+    btn.onclick= getName("123");
+
+    var EventUtil={
+            addHandler:function(element,type,handler){
+                if (element.addEventListener){
+                    element.addEventListener(type, handler, false);
+                }else if (element.attachEvent){
+                    element.attachEvent("on"+type, handler);
+                }else{
+                    element["on"+type]=handler;
+                }
+            },
+            removeHandler:function(element, type, handler){
+                if (element.removeEventListener){
+                    element.removeEventListener(type, handler, false);
+                } else if (element.detachEvent){
+                    element.detachEvent("on" + type, handler);
+                } else {
+                    element["on" + type] = null;
+                }
+            }
+        }
+//        EventUtil.addHandler(window,'resize',function(){
+//            alert("resize");
+//        });
+//        EventUtil.addHandler(window,"mousedown",function(){
+//           alert("scroll");
+//        });
+//        EventUtil.addHandler(window,"mouseenter",function(){
+//           alert("scroll");
+//        });
+
+        var div=document.getElementById("mydiv");
+        EventUtil.addHandler(div,"click",function(){
+            var event=EventUtil.getEvent(event);
+            alert(event.clientX);
+        });
+
+
+
+
+    })();
+
+
+//        btn.addEventListener("click",getName(name),false);
+//        EventUtil.addHandler(btn,"click",getName(name));
+
+
+</script>
+</body>
+</html>
